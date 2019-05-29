@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--连接设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowConnect" size="570,540" text="设置">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <!--多页夹控件-->
+        <div type="tabcontrol" name="tabControlMain" backcolor="empty" location="10,10" selectedindex="0" size="448,413">
+          <!--服务器配置页-->
+          <div type="tabpage" name="tabConnect" backcolor="empty" text="服务器配置" size="448,381">
+            <!--主服务器标签-->
+            <label name="lblMainServer" text="主服务器" location="27,183" size="60,17" font="Arial,12,bold" visible="False" />
+            <!--行情服务标签-->
+            <label name="lblQuoteServer" text="CTP行情服务器" location="22,27" size="98,17" font="Arial,12,bold" />
+            <!--交易服务器标签-->
+            <label name="lblTradeServer" text="CTP交易服务器" location="24,109" size="100,20" font="Arial,12,bold" />
+            <!--主服务器IP地址标签-->
+            <label name="lblMainServerIP" text="IP地址" location="38,222" size="44,17" visible="False" />
+            <!--主服务器IP地址-->
+            <select name="cbMainServerIP" location="88,219" size="270,20" visible="False" />
+            <!--主服务器端口标签-->
+            <!--主服务器端口-->
+            <!--行情服务器IP地址标签-->
+            <label name="lblQuoteServerIP" text="IP地址" location="44,66" size="44,17" />
+            <!--行情服务器IP地址-->
+            <select name="cbCTPQuoteServerIP" location="94,63" size="270,20" />
+            <!--行情服务器端口标签-->
+            <!--行情服务器端口-->
+            <!--交易服务器IP地址标签-->
+            <label name="lblTradeServerIP" text="IP地址" location="41,142" size="44,17" />
+            <!--交易服务器IP地址-->
+            <select name="cbCTPTradeServerIP" location="94,139" size="270,20" />
+            <!--交易服务器端口标签-->
+            <!--交易服务器端口-->
+          </div>
+          <!--网络设置页-->
+          <div type="tabpage" name="tabProxy" backcolor="empty" text="网络设置" size="836,769" location="-18,-51">
+            <!--代理类型标签-->
+            <label name="Label" text="    类型：" location="13,30" size="60,17" />
+            <!--代理地址标签-->
+            <label name="Label1" text="地址：" location="171,31" size="46,17" />
+            <!--代理端口标签-->
+            <label name="Label2" text="端口：" location="308,30" size="46,17" />
+            <!--代理用户名标签-->
+            <label name="Label3" text="用户名：" location="13,75" size="60,17" />
+            <!--代理密码标签-->
+            <label name="Label4" text="密码：" location="171,75" size="46,17" />
+            <!--代理域标签-->
+            <label name="Label5" text="    域：" location="308,74" size="46,17" />
+            <!--代理类型下拉框-->
+            <select name="cbProxyType" location="63,27" readonly="true" size="104,20">
+              <option text="不使用代理" />
+              <option text="HTTP代理" />
+              <option text="SOCKS5代理" />
+              <option text="使用浏览器设置" />
+            </select>
+            <!--代理地址文本框-->
+            <input type="text" name="txtProxyIP" location="209,27" size="95,20" />
+            <!--代理端口文本框-->
+            <input type="range" name="spinProxyPort" location="346,27" size="77,20" textalign="far" maximum="1000000" />
+            <!--代理用户名文本框-->
+            <input type="text" name="txtProxyUserName" location="62,71" size="104,20" />
+            <!--代理密码文本框-->
+            <input type="text" name="txtProxyUserPwd" location="209,71" size="96,20" />
+            <!--代理域文本框-->
+            <input type="text" name="txtProxyDomain" location="345,71" size="78,20" />
+          </div>
+          <!--服务器资源页-->
+          <div type="tabpage" name="tabServer" backcolor="empty" text="服务器资源" size="444,399">
+            <!--服务器列表-->
+            <table name="gridServers" backcolor="empty" text="Grid1" location="9,10" size="429,257">
+              <tr>
+                <th name="colID" text="ID" visible="false" width="0" />
+                <th name="colIP" text="服务器地址" width="200" />
+                <th name="colPort" text="端口" width="100" />
+                <th name="colType" text="服务器类型" width="100" />
+              </tr>
+            </table>
+            <!--IP地址标签-->
+            <label name="lblIP" text="IP地址:" location="14,286" size="48,17" />
+            <!--IP地址-->
+            <input type="text" name="txtIP" location="90,282" size="119,21" />
+            <!--端口标签-->
+            <label name="lblPort" text="端口:" location="219,286" size="36,17" />
+            <!--端口-->
+            <input type="range" name="spinPort" location="267,283" size="100,20" textalign="far" maximum="1000000" />
+            <!--服务器类型-->
+            <select name="cbType" location="89,321" readonly="true" size="119,20">
+              <option text="主服务器" />
+              <option text="CTP行情服务器" />
+              <option text="CTP交易服务器" />
+            </select>
+            <!--服务器类型标签-->
+            <label name="Label12" text="服务器类型:" location="11,325" size="77,17" />
+            <!--增加按钮-->
+            <input type="usercontrol" cid="ribbonbutton2" name="btnAdd" text="增加" location="38,356" size="100,24" />
+            <!--修改按钮-->
+            <input type="usercontrol" cid="ribbonbutton2" name="btnUpdate" text="修改" location="165,356" size="100,24" />
+            <!--删除按钮-->
+            <input type="usercontrol" cid="ribbonbutton2" name="btnDelete" text="删除" location="289,356" size="100,24" />
+          </div>
+        </div>
+        <!--保存配置按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSave" text="保存配置" location="10,433" size="103,29" />
+        <!--退出按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="退出" location="379,433" size="78,29" height="29" />
+      </div>
+    </div>
+  </body>
+</html>

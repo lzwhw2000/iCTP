@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--快捷交易设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowHotKey" size="703,440" location="0,0" text="快捷交易设置">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="623,365" margin="30,40,50,35" location="30,40">
+        <!--快捷键表格-->
+        <bandedgrid name="gridHotKey" backcolor="empty" headerheight="40" size="567,240" location="17,20" />
+        <!--添加快捷键组按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnAddHotKey" size="109,29" text="添加快捷键组" location="17,268" />
+        <!--删除快捷键组按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnDeleteHotKey" size="109,29" text="删除快捷键组" location="133,268" />
+        <!--确认并保存按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" size="109,29" text="确认并保存" location="359,268" />
+        <!--取消按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" size="109,29" text="取消" location="474,268" />
+        <!--说明标签-->
+        <label name="lblDescription" forecolor="255,0,0" size="305,17" text="说明：选中并单双击设置项对应的单元格进行修改" location="16,305" />
+        <!--注意标签-->
+        <label name="lblAttention" forecolor="255,0,0" size="495,17" text="注意：快捷键仅在行情界面选中合约后被激活，请注意交易设置面板上的状态提示" location="16,327" />
+      </div>
+    </div>
+  </body>
+</html>

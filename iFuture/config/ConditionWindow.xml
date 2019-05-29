@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--设置触发条件窗体-->
+    <div type="usercontrol" cid="windowex" name="windowCondition" size="404,274" text="设置触发条件窗体" location="0,0">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <!--预埋（本地），手动发出单选按钮-->
+        <input type="radio" name="rbParkedOrder1" groupname="condition" checked="true" location="13,27" size="229,20" text="预埋（本地），手动发出" />
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" text="确定" location="114,149" size="78,29" />
+        <!--取消框架-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="取消" location="200,149" size="78,29" />
+        <!--预埋（本地），当重新进入交易状态时按钮-->
+        <input type="radio" name="rbParkedOrder2" groupname="condition" location="13,55" size="271,20" text="预埋（本地），当重新进入交易状态时" />
+        <!--条件（本地），当行情满足以下条件时-->
+        <input type="radio" name="rbParkedOrder3" groupname="condition" location="13,84" size="271,20" text="条件（本地），当行情满足以下条件时" />
+        <!--委托文字-->
+        <label name="lblOrderStr" location="20,110" size="267,29" text="--" font="Arial,14,bold" />
+        <!--条件层-->
+        <div name="divCondition" backcolor="empty" size="264,32" location="17,109" visible="false">
+          <!--当标签-->
+          <label name="Label" text="当" location="3,6" size="19,20" />
+          <!--价格类型-->
+          <select name="cbPriceType" location="22,6" readonly="true" selectedindex="0" size="71,20">
+            <option text="最新价" />
+            <option text="对手价" />
+          </select>
+          <!--符号类型-->
+          <select name="cbOp" location="97,6" readonly="true" selectedindex="0" size="66,20">
+            <option text="&gt;" />
+            <option text="&gt;=" />
+            <option text="&lt;" />
+            <option text="&lt;=" />
+          </select>
+          <!--价格-->
+          <input type="range" name="spinValue" location="167,6" maximum="100000000" size="63,20" textalign="far" />
+          <!--时标签-->
+          <label name="Label1" text="时" location="232,8" size="30,17" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

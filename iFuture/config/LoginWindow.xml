@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--登录窗体-->
+    <div type="usercontrol" cid="windowex" name="windowLogin" size="530,546" location="0,0" text="登录">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="450,471" margin="30,40,50,35" location="30,40">
+        <!--网络设置-->
+        <linklabel name="lbNetSetting" text="网络设置" location="325,111" size="60,17" linkcolor="43,138,195" />
+        <!--投资者机构标签-->
+        <label name="lblCTPBrokenID" text="支持国内期货的模拟盘和实盘交易" location="49,11" size="364,35" font="微软雅黑,23" forecolor="255,128,0" />
+        <!--投资者帐号标签-->
+        <!--投资者密码标签-->
+        <label name="lblCTPPwd" text="投资者密码：" location="58,196" size="99,23" font="微软雅黑,15" />
+        <!--投资者机构文本框-->
+        <select name="txtCTPBrokenID" location="152,108" size="164,22" text="" font="微软雅黑,15" />
+        <!--投资者帐号文本框-->
+        <input type="text" name="txtCTPInvestorID" location="152,151" size="164,22" text="" font="微软雅黑,15" />
+        <!--投资者密码文本框-->
+        <input type="text" name="txtlblCTPPwd" location="152,196" passwordchar="*" size="164,22" text="" font="微软雅黑,15" />
+        <!--取消按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" location="237,242" size="99,32" Text="取消" font="微软雅黑,14" />
+        <!--登录按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnLogin" location="124,242" size="99,32" Text="登录" font="微软雅黑,14" />
+        <label name="Label" text="(按住CTRL+滑动鼠标滚轮可以随意放大和缩小画面)" location="73,65" size="311,20" font="微软雅黑,13" />
+        <label name="Label2" text="投资者帐号：" location="58,150" size="99,23" font="微软雅黑,15" />
+        <label name="lblCTPInvestorID" text="该程序100%基于VC++6.0开发，除自动更新外不与CTP以外服务通讯" location="33,294" size="385,19" font="微软雅黑,12" forecolor="255,0,0" />
+        <label name="Label3" text="投资者机构：" location="58,107" size="99,23" font="微软雅黑,15" />
+        <div name="Div" text="Div" location="28,329" size="182,76" backimage="ningmi.png" backcolor="255,255,255">
+        </div>
+        <div name="Div2" text="Div" location="244,329" size="182,76" backimage="facecat.jpeg" />
+        <label name="Label4" text="上海宁米网络科技有限公司出品" location="8,415" size="228,19" font="Arial,14" />
+        <label name="Label5" text="捂脸猫FaceCat" location="284,414" size="108,19" font="Arial,14" />
+        <linklabel name="btnTestUse" text="我没账号" location="325,155" size="60,17" linkcolor="43,138,195" />
+      </div>
+    </div>
+  </body>
+</html>

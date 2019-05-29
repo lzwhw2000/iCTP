@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--自动撤单设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowAutoCancel" size="484,255" location="0,0" text="自动撤单设置">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <!--主图层-->
+        <div name="divMain" backcolor="empty" size="351,101" location="16,10">
+          <!--标签1-->
+          <!--时间-->
+          <input type="range" name="spinTime" digit="0" location="112,28" maximum="100000000" textalign="far" size="66,20" />
+          <label name="Label" text="秒未成交时，自动撤单" location="187,32" size="141,17" />
+        </div>
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" text="确定并保存" location="203,139" size="96,27" />
+        <!--取消按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="取消" location="306,138" size="60,28" />
+        <label name="Label2" text="当开仓挂单达到  " location="19,41" size="108,17" />
+      </div>
+    </div>
+  </body>
+</html>

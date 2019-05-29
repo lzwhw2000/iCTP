@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--合约设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowUS" size="706,436" location="0,0" Text="合约设置">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="626,370" margin="30,40,50,35" location="30,40">
+        <!--添加类别按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnAddCategory" location="9,325" size="100,29" text="添加类别" />
+        <!--添加类别按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnDeleteCategory" location="119,325" size="100,29" text="删除类别" />
+        <!--合约类别表格-->
+        <table name="gridCategory" autoellipsis="true" backcolor="empty" celleditmode="DoubleClick" gridlinecolor="empty" size="210,270" location="9,50" headervisible="false" showvscrollbar="true">
+          <tr>
+            <th text="合约ID" visible="false" />
+            <th text="合约类别" width="210" />
+          </tr>
+        </table>
+        <!--导入成份按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnAddSecurities" location="417,325" size="86,29" text="导入合约" />
+        <!--删除合约按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnDeleteSecurities" location="508,325" size="86,29" text="删除合约" />
+        <!--合约列表表格-->
+        <table name="gridSecurities" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="269,49" multiselect="true" size="325,271">
+          <tr>
+            <th text="合约代码" />
+            <th text="合约名称" />
+            <th text="市场名称" />
+          </tr>
+        </table>
+        <!--合约类别标签-->
+        <label name="lblCategory" location="9,27" size="100,20" text="合约类别：" />
+        <!--合约成份标签-->
+        <label name="lblSecurities" location="268,28" size="100,20" text="合约列表" />
+        <!--搜索添加按钮-->
+        <input type="text" name="txtIssueCode_UserSecurity" location="304,330" size="108,20" />
+        <!--搜索添加标签-->
+        <label name="lblSearch" location="267,333" size="46,17" text="搜索：" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <div type="splitlayout" name="divAll" candragsplitter="true" layoutstyle="toptobottom" dock="fill" size="400,505" splitterposition="0,70,400,70">
+      <!--持仓页-->
+      <div type="tabcontrol" name="tabTradeAccount" backcolor="empty">
+        <input type="usercontrol" cid="tabpageex" name="pageTradeAccount" text="持仓" />
+      </div>
+      <!--下层-->
+      <div type="splitlayout" name="divBottom" backcolor="empty" candragsplitter="true" layoutstyle="bottomtotop" size="400,450" splitterposition="0,430,400,430">
+        <!--状态层-->
+        <div name="divStatus" size="966,17" backcolor="empty">
+          <!--交易时间标签-->
+          <label name="lblTradingTime" text="--" location="3,0" size="100,20" font="Arial,12,bold" />
+          <!--日志标签-->
+          <label name="lbllog" text="--" location="105,0" size="352,20" font="arial,12,bold" />
+        </div>
+        <!--中间层-->
+        <div type="splitlayout" name="divMiddle" backcolor="empty" candragsplitter="true" layoutstyle="lefttoright" size="600,600" splitmode="percentsize" splitterposition="300,0,300,600">
+          <div type="tabcontrol" name="tabMiddle1_1_1" selectedindex="0" backcolor="empty">
+            <!--合约层-->
+            <div type="layout" name="divUList" bordercolor="empty" dock="top" layoutstyle="righttoleft" size="400,20" />
+            <!--报价表页-->
+            <input type="usercontrol" cid="tabpageex" name="pagePageQuote" text="报价表" backcolor="empty"/>
+            <!--合约列表页-->
+            <input type="usercontrol" cid="tabpageex" name="pageContracts" text="合约列表" backcolor="empty"/>
+            <!--图形页-->
+            <input type="usercontrol" cid="tabpageex" name="pageChart" text="图形" backcolor="empty"/>
+          </div>
+          <div type="splitlayout" name="divMiddle1" backcolor="empty" candragsplitter="true" layoutstyle="toptobottom" size="600,400" splitmode="absolutesize" splitterposition="0,270,600,270">
+            <div type="tabcontrol" name="tabMiddle2_2" selectedindex="0" backcolor="empty">
+              <!--标准下单-->
+              <input type="usercontrol" cid="tabpageex" name="pageTrade" text="标准下单" backcolor="empty"/>
+              <!--交易设置-->
+              <input type="usercontrol" cid="tabpageex" name="pageTradeSetting" text="交易设置" backcolor="empty"/>
+            </div>
+            <div type="splitlayout" name="divMiddle1_2" backcolor="empty" candragsplitter="true" layoutstyle="toptobottom" size="300,400" splitmode="percentsize" splitterposition="0,200,300,200">
+              <div type="tabcontrol" name="tabMiddle1_2_2" selectedindex="0" backcolor="empty">
+                <!--持仓页-->
+                <input type="usercontrol" cid="tabpageex" name="pagePageInvestorPosition" text="持仓" backcolor="empty"/>
+              </div>
+              <div type="tabcontrol" name="tabMiddle1_2_1" selectedindex="0" backcolor="empty">
+                <!--未成交单页-->
+                <input type="usercontrol" cid="tabpageex" name="pageNoTrade" text="未成交单" backcolor="empty"/>
+                <!--所有委托单页-->
+                <input type="usercontrol" cid="tabpageex" name="pageAllOrders" text="所有委托单" backcolor="empty"/>
+                <!--预埋单条件单页-->
+                <input type="usercontrol" cid="tabpageex" name="pageParkedOrder" text="预埋单条件单" backcolor="empty"/>
+                <!--成交记录页-->
+                <input type="usercontrol" cid="tabpageex" name="pageTradeRecord" text="成交记录" backcolor="empty" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

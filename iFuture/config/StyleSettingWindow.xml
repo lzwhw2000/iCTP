@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--样式选择窗体-->
+    <div type="usercontrol" cid="windowex" name="windowStyle" size="435,250" location="0,0" Text="样式选择">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="355,175" margin="30,40,50,35" location="30,40">
+        <!--样式1按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnStyle1" location="5,36" size="109,40" Text="科技墨兰" font="Arial,16,Bold" />
+        <!--样式2按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnStyle2" location="122,36" size="109,40" Text="清新蓝白" font="Arial,16,Bold" />
+        <!--样式3按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnStyle3" location="238,36" size="109,40" Text="金融黑灰" font="Arial,16,Bold" />
+        <label name="Label" text="请选择布局风格：" location="7,91" size="114,17" />
+        <input type="usercontrol" cid="ribbonbutton2" name="btnLayout3" location="237,119" size="109,40" Text="风格3" font="Arial,16,Bold" />
+        <label name="Label2" text="请选择颜色：" location="9,8" size="87,17" />
+        <input type="usercontrol" cid="ribbonbutton2" name="btnLayout1" location="6,119" size="109,40" Text="风格1" font="Arial,16,Bold" />
+        <input type="usercontrol" cid="ribbonbutton2" name="btnLayout2" location="122,119" size="109,40" Text="风格2" font="Arial,16,Bold" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--默认交易手数设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowVolume" size="655,444" location="0,0" text="默认交易手数">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <!--默认手数表格-->
+        <table name="gridVolume" backcolor="empty" location="12,10" size="529,299">
+          <tr>
+            <th name="colV1" text="品种" />
+            <th name="colV2" text="名称" width="140" />
+            <th name="colV3" horizontalalign="center" text="交易所" />
+            <th name="colV4" horizontalalign="far" text="默认交易手数" width="140" />
+          </tr>
+        </table>
+        <!--搜索标签-->
+        <label name="lblSearch" location="13,334" text="输入筛选条件：" size="101,17" />
+        <!--搜索框-->
+        <input type="text" name="txtSearch" location="106,332" size="235,20" />
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" text="确定并保存" location="376,327" size="96,29" />
+        <!--取消按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="取消" location="481,327" size="60,29" />
+      </div>
+    </div>
+  </body>
+</html>

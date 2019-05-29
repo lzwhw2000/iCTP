@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--合约列表窗体-->
+    <div type="usercontrol" cid="windowex" name="windowSecurity" size="793,444" location="0,0" text="合约列表">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <!--待选合约列表表格-->
+        <table name="gridSelectSecurities" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="218,55" multiselect="true" showvscrollbar="true" size="210,271">
+          <tr>
+            <th text="合约代码" />
+            <th text="合约名称" />
+          </tr>
+        </table>
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" location="473,335" size="100,29" text="确定" />
+        <!--取消按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" location="582,335" size="97,29" text="取消" />
+        <!--股票列表表格-->
+        <table name="gridSecurities" allowdragrow="true" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="469,55" multiselect="true" size="212,271">
+          <tr>
+            <th text="合约代码" />
+            <th text="合约名称" />
+          </tr>
+        </table>
+        <!--待选成份列表标签-->
+        <label name="lblSelectSecurities" location="218,32" size="100,20" text="待选合约列表：" />
+        <!--选中股票-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSelectSecurities" location="436,103" size="25,25" text="&gt;" />
+        <!--全选股票-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSelectAllSecurities" location="436,141" size="25,25" text="&gt;&gt;" />
+        <!--取消选中全部股票-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnUnSelectAllSecurities" location="436,180" size="25,25" text="&lt;&lt;" />
+        <!--取消选中股票-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnUnSelectSecurities" location="436,219" size="25,25" text="&lt;" />
+        <!--板块树-->
+        <tree name="tvBlock" autoellipsis="true" backcolor="empty" location="12,55" size="200,271" headervisible="false">
+          <tr>
+            <th name="colBlockNode1" text="板块节点1" width="10" />
+            <th name="colBlockNode2" text="板块节点2" width="10" />
+            <th name="colBlockNode3" text="板块节点3" width="10" />
+            <th name="colBlockNode4" text="板块节点4" width="0" />
+            <th name="colBlockNode5" text="板块节点5" width="0" />
+            <th name="colBlockNode6" text="板块节点6" width="170" />
+          </tr>
+          <nodes>
+            <node text="期货" font="SimSun,14,Bold" value="111">
+              <node text="市场类" value="111001">
+                <node text="上期所" value="111001SHFE" />
+                <node text="郑商所" value="111001CZCE" />
+                <node text="大商所" value="111001DCE" />
+                <node text="中金所" value="111001CFFEX" />
+              </node>
+            </node>
+            <node text="自选合约" font="SimSun,14,Bold" />
+          </nodes>
+        </tree>
+        <!--全部板块标签-->
+        <label name="lblBlock" location="12,32" size="100,20" Text="全部板块" />
+      </div>
+    </div>
+  </body>
+</html>

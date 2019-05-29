@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--清仓全撤快捷键设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowClear" size="449,333" location="0,0" text="清仓全撤快捷键设置">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <!--主图层-->
+        <div name="divMain" backcolor="empty" size="312,188" location="16,10">
+          <!--清仓快捷键设置标签-->
+          <label name="lblClear" text="清仓快捷键设置：" location="13,20" size="114,17" font="Arial,12" />
+          <!--全撤快捷键设置标签-->
+          <label name="lblCancel" text="全撤快捷键设置：" location="12,123" size="114,17" font="Arial,12" />
+          <!--清仓快捷键文本框-->
+          <input type="usercontrol" cid="hotkeybutton" name="btnClearKey" location="115,14" size="148,24" />
+          <!--全撤快捷键文本框-->
+          <input type="usercontrol" cid="hotkeybutton" name="btnCancelKey" location="115,117" size="147,24" />
+          <!--注意标签1-->
+          <!--注意标签2-->
+          <label name="lblAttention" text="注意：清仓功能使用时会自动撤当前已挂单" location="13,157" size="258,20" forecolor="255,0,0" />
+          <!--注意标签3-->
+          <!--报价单标签-->
+          <label name="lblPriceType" text="报单价：" location="66,53" size="60,17" />
+          <!--报价单下拉-->
+          <select name="cbPriceType" location="115,51" readonly="true" size="148,20" selectedindex="0">
+            <option text="最新价" />
+            <option text="对手价" />
+          </select>
+          <!--超价标签-->
+          <label name="lblExceedPrice" text="超价：" location="79,87" size="46,17" />
+          <!--超价数值框-->
+          <input type="range" name="spinExceedPrice" digit="0" location="115,85" maximum="100000000" textalign="far" size="100,20" />
+        </div>
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" text="确定并保存" location="163,222" size="96,29" />
+        <!--取消框架-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="取消" location="268,222" size="60,29" />
+      </div>
+    </div>
+  </body>
+</html>

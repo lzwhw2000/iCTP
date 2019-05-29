@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <script>
+		function ShowIntroduce1()
+		{
+			execute('https://baijiahao.baidu.com/s?id=1619162142289108505&amp;wfr=spider&amp;for=pc');
+		}
+
+		function ShowIntroduce2()
+		{
+			execute('http://www.sohu.com/a/296822555_100265936');
+		}
+
+		function ShowDesigner()
+		{
+			execute('iDesigner.exe');
+		}
+
+		function ShowMaimai()
+		{
+			execute('http://taou.cn/m0eNu');
+		}
+	</script>
+  </head>
+  <body>
+    <!--关于窗体-->
+    <div type="usercontrol" cid="windowex" name="windowAbout" size="472,431" location="0,0" Text="关于我们">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="413,372" margin="30,40,50,35" location="30,40">
+        <div name="Div" text="Div" location="96,8" size="152,139" backimage="taode.png">
+        </div>
+        <a name="lbIntroduce1" text="关于陶德的介绍1" location="93,191" size="108,17" onclick="ShowIntroduce1();" linkcolor="43,138,195" />
+        <a name="lbIntroduce2" text="关于陶德的介绍2" location="93,217" size="108,17" onclick="ShowIntroduce2();" linkcolor="43,138,195" />
+        <a name="lbDiy" text="图形界面DIY" location="92,269" size="80,17" onclick="ShowDesigner();" linkcolor="43,138,195" />
+        <a name="LinkLabel" text="脉脉上对于该软件的评价" location="92,242" size="155,17" onclick="ShowMaimai();" linkcolor="43,138,195" />
+        <label name="Label" text="矿洞程序员" location="133,155" size="78,22" font="微软雅黑,14" />
+        <label name="Label2" text="上期官方模拟账号可以找我们要!" location="97,307" size="265,22" forecolor="255,0,0" font="Arial,16" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--自动止损设置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowAutoClose" size="503,516" location="0,0" text="自动止损设置">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="423,441" margin="30,40,50,35" location="30,40">
+        <!--主图层-->
+        <div name="divMain" backcolor="empty" size="370,385" location="16,1">
+          <!--自动止损表格-->
+          <table name="gridAutoClose" backcolor="empty" location="13,113" size="345,194">
+            <tr>
+              <th name="colA1" text="品种" width="60" />
+              <th name="colA2" horizontalalign="far" text="触发止损点(Tick)" width="120" />
+              <th name="colA3" horizontalalign="center" text="价格类型" location="180,10" size="100,10" />
+              <th name="colA4" horizontalalign="far" text="超价" width="60" />
+            </tr>
+          </table>
+          <!--注意标签-->
+          <label name="lblAttention" forecolor="255,0,0" text="注意：自动止损为服务端条件单，平仓前会自动撤销原挂单" location="13,323" size="359,17" />
+          <!--添加按钮-->
+          <input type="usercontrol" cid="ribbonbutton2" name="btnAdd" text="添加" location="205,347" size="69,28" />
+          <!--删除按钮-->
+          <input type="usercontrol" cid="ribbonbutton2" name="btnDelete" text="删除" location="283,347" size="69,28" />
+          <!--标签1-->
+          <label name="Label1" text="当品种" location="16,19" size="46,17" />
+          <!--选择品种按钮-->
+          <input type="text" name="txtIssueCode_SelectIssueCode" location="69,17" size="100,20" />
+          <!--标签2-->
+          <label name="Label2" text="有新开仓时，以每笔开仓价" location="172,20" size="169,17" />
+          <!--标签3-->
+          <label name="Label3" text="调整" location="16,53" size="33,17" />
+          <!--调整数值框-->
+          <input type="range" name="spinTick" digit="0" location="57,50" maximum="100000000" textalign="far" size="70,20" />
+          <!--标签4-->
+          <label name="Label4" text="Tick" location="138,52" size="28,16" />
+          <!--标签5-->
+          <label name="Label5" text="生成自动的平仓报价单" location="173,53" size="141,17" />
+          <!--标签6-->
+          <label name="Label6" text="平仓单报价为" location="16,87" size="87,17" />
+          <!--价格方式选择-->
+          <select name="cbPriceType" location="105,83" readonly="true" selectedindex="0" size="82,21">
+            <option text="最新价" />
+            <option text="对手价" />
+          </select>
+          <!--标签7-->
+          <label name="Label7" text="超价" location="192,87" size="33,17" />
+          <!--超价数值框-->
+          <input type="range" name="spinExceedPrice" digit="0" location="228,83" maximum="100000000" textalign="far" size="82,20" />
+          <!--代码输入框-->
+        </div>
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" text="确定" location="189,395" size="87,29" />
+        <!--取消按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="取消" location="289,395" size="87,29" />
+      </div>
+    </div>
+  </body>
+</html>

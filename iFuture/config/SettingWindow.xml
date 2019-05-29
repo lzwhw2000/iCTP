@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--选项配置窗体-->
+    <div type="usercontrol" cid="windowex" name="windowSetting" size="702,429" text="选项配置" location="0,0">
+      <div dock="fill" bordercolor="empty" backcolor="empty" size="200,200" margin="30,40,50,35" location="25,40">
+        <div type="splitlayout" name="layoutMain" backcolor="empty" candragsplitter="true" dock="fill" splitterposition="150,0,155,484">
+          <!--配置列表树-->
+          <tree name="tvList" autoellipsis="true" backcolor="empty" headervisible="false" size="200,410">
+            <tr>
+              <th name="colItem" text="类别" width="0" />
+              <th name="colSubItem" text="指标" width="200" />
+            </tr>
+            <nodes>
+              <node text="页面列表" font="SimSun,14,Bold">
+                <node name="tableSetting_TradeAccount" text="资金账户" />
+                <node name="tableSetting_LatestData" text="报价表" />
+                <node name="tableSetting_TradeRecord" text="成交记录" />
+                <node name="tableSetting_TradeStatistics" text="成交统计" />
+                <node name="tableSetting_InvestorPosition" text="持仓" />
+                <node name="tableSetting_InvestorPositionDetail" text="持仓明细" />
+                <node name="tableSetting_Contracts" text="合约列表" />
+                <node name="tableSetting_Order" text="所有委托单" />
+                <node name="tableSetting_NoTrade" text="未成交单" />
+                <node name="tabPageSetting_Trade" text="标准下单" />
+                <node name="tabPageSetting_TradeSetting" text="交易设置" />
+              </node>
+            </nodes>
+          </tree>
+          <div name="divLayout" backcolor="empty">
+            <!--表格设置层-->
+            <div name="divTableSetting" backcolor="empty" dock="Fill">
+              <div type="groupbox" name="gbSetting1" backcolor="empty" text="第一项：显示/隐藏" location="10,10" size="260,60">
+                <!--标题复选框-->
+                <input type="checkbox" name="cbTitle" text="标题" location="131,26" size="62,21" />
+                <!--页面复选框-->
+                <input type="checkbox" name="cbPage" text="页面" location="33,28" size="77,17" />
+              </div>
+              <div type="groupbox" name="gbSetting2" backcolor="empty" text="第二项：表格列设置" location="11,80" size="402,260">
+                <!--列头表格-->
+                <table name="gridColumns" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="11,23" multiselect="true" showvscrollbar="true" size="202,225">
+                  <tr>
+                    <th text="列名" width="0" />
+                    <th text="标题" />
+                    <th text="显示" />
+                  </tr>
+                </table>
+                <!--上移按钮-->
+                <input type="usercontrol" cid="ribbonbutton2" name="btnMoveColumnUp" text="上移" location="224,24" size="50,40" />
+                <!--下移按钮-->
+                <input type="usercontrol" cid="ribbonbutton2" name="btnMoveColumnDown" text="下移" location="224,69" size="50,40" />
+                <!--使用按钮-->
+                <input type="usercontrol" cid="ribbonbutton2" name="btnUseColumnSettings" text="设置" location="224,163" size="50,40" />
+                <!--恢复默认按钮-->
+                <input type="usercontrol" cid="ribbonbutton2" name="btnUseDefaultColumnSettings" text="默认" location="224,208" size="50,40" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--确定按钮-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnSubmit" text="确定" location="463,360" size="61,20" />
+        <!--取消框架-->
+        <input type="usercontrol" cid="ribbonbutton2" name="btnCancel" text="取消" location="533,360" size="60,20" />
+      </div>
+    </div>
+  </body>
+</html>
