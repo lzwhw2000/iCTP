@@ -995,7 +995,7 @@ def onTradeRecordsCallBack(data, ctpID):
     return
 
 #创建dll
-ctp = cdll.LoadLibrary(r"LordCTP.dll");
+ctp = cdll.LoadLibrary(r"iCTP.dll");
 cdll.argtypes = [c_char_p, c_int, c_double, c_long, c_wchar_p];
 print("CTP Python启动!");
 ctpID = ctp.create();
