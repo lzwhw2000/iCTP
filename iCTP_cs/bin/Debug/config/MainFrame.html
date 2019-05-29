@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <div name="divMain" size="976,593" location="0,0" dock="fill">
+      <label name="Label" text="下单冻结：" location="640,16" size="73,17" font="Arial,14" />
+      <label name="Label2" text="动态权益：" location="19,16" size="73,17" font="Arial,14" />
+      <label name="Label3" text="持仓盈亏：" location="182,16" size="73,17" font="Arial,14" />
+      <label name="Label4" text="平仓盈亏：" location="340,16" size="85,19" font="Arial,14" />
+      <label name="Label5" text="手续费：" location="477,16" size="60,17" font="Arial,14" />
+      <label name="Label6" text="风险度：" location="798,16" size="73,17" font="Arial,14" />
+      <label name="Label7" text="股票代码：" location="21,56" size="85,19" font="Arial,14" />
+      <input type="text" name="txtCodes" location="108,54" size="244,20" text="" temptext="多个代码用逗号相连" font="Arial,14" />
+      <label name="Label8" text="创新高计算周期：" location="362,55" size="114,17" font="Arial,14" />
+      <label name="Label9" text="止损" location="863,55" size="38,19" font="Arial,14" />
+      <input type="range" name="spinN" location="479,53" size="56,20" maximum="10000" step="1" digit="0" value="20" font="Arial,14" />
+      <input type="range" name="spinM" location="662,53" size="55,20" maximum="10000" step="1" digit="0" value="60" font="Arial,14" />
+      <input type="button" name="btnStart" text="启动策略" location="1002,15" size="101,28" font="Arial,16" />
+      <table name="gridLatestData" text="Grid" location="32,124" size="1107,136">
+        <tr>
+          <th name="colL1" cellalign="left" columntype="text" width="80">合约代码</th>
+          <th name="colL2" cellalign="right" columntype="double" width="80">最新价格</th>
+          <th name="colL3" cellalign="right" columntype="double" width="80">买一价</th>
+          <th name="colL4" cellalign="right" columntype="int" width="60">买一量</th>
+          <th name="colL5" cellalign="right" columntype="double" width="80">卖一价</th>
+          <th name="colL6" cellalign="right" columntype="int" width="60">卖一量</th>
+          <th name="colL7" cellalign="right" columntype="double" width="80">持仓量</th>
+          <th name="colL8" cellalign="right" columntype="double" width="80">成交量</th>
+          <th name="colL9" cellalign="left" columntype="text" width="80">最新行情时间</th>
+          <th name="colL10" cellalign="left" columntype="text" width="90" location="720,0" size="90,20">买开创新高</th>
+          <th name="colL11" cellalign="left" columntype="text" width="90" location="810,0" size="90,20">买开均线向上</th>
+          <th name="colL12" cellalign="left" columntype="text" width="90">卖开创新低</th>
+          <th name="colL13" cellalign="left" columntype="text" width="90">卖开均线向下</th>
+          <th name="colL14" cellalign="left" columntype="text" width="90">是否交易</th>
+        </tr>
+      </table>
+      <label name="fundLabel4" text="--" location="547,16" size="14,16" font="Arial,14" />
+      <label name="fundLabel1" text="--" location="89,16" size="14,16" font="Arial,14" />
+      <label name="fundLabel2" text="--" location="253,16" size="14,16" font="Arial,14" />
+      <label name="fundLabel3" text="--" location="410,16" size="14,16" font="Arial,14" />
+      <label name="fundLabel6" text="--" location="868,16" size="16,19" font="Arial,14" />
+      <label name="fundLabel5" text="--" location="711,16" size="16,19" minimumsize="0,0" font="Arial,14" />
+      <label name="Label12" text="行情列表" location="29,93" size="70,19" font="Arial,14" />
+      <chart name="chartLeft" location="32,309" size="1107,249" />
+      <label name="Label13" text="K线图" location="32,279" size="47,19" font="Arial,14" />
+      <label name="Label16" text="均线计算周期：" location="545,55" size="117,19" font="Arial,14" />
+      <label name="Label17" text="止盈：" location="727,55" size="54,19" font="Arial,14" />
+      <input type="range" name="Spin" location="776,53" size="60,20" font="Arial,14" value="1.03" opacity="1" minimum="0" step="0.01" digit="2" />
+      <input type="range" name="Spin2" location="909,54" size="52,20" font="Arial,14" value="0.99" opacity="1" minimum="0" step="0.01" digit="2" />
+      <label name="Label18" text="%" location="971,56" size="19,19" font="Arial,14" />
+      <label name="Label19" text="%" location="844,53" size="19,19" font="Arial,14" />
+      <div type="tabcontrol" name="TabControl" text="TabControl" location="32,573" size="1107,246" selectedindex="0">
+        <div name="TabPage" text="持仓" type="tabpage">
+          <table name="gridInvestorPositions" text="Grid" location="161,30" size="257,89" dock="fill">
+            <tr>
+              <th name="colI1" width="103" columntype="text" cellalign="left" Vertical_Align="Middle">合约</th>
+              <th name="colI2" width="80" height="27" columntype="text" cellalign="right" Vertical_Align="Middle">买卖</th>
+              <th name="colI3" width="94" columntype="int" cellalign="right" Vertical_Align="Middle" location="183,0" size="94,20">总持仓</th>
+              <th name="colI4" width="94" columntype="int" cellalign="right" Vertical_Align="Middle">昨仓</th>
+              <th name="colI5" width="94" columntype="int" cellalign="right" Vertical_Align="Middle">今仓</th>
+              <th name="colI6" width="114" columntype="int" cellalign="right" Vertical_Align="Middle">可平量</th>
+              <th name="colI7" width="123" columntype="double" cellalign="right" Vertical_Align="Middle">持仓均价</th>
+              <th name="colI8" width="140" columntype="double" cellalign="right" Vertical_Align="Middle">持仓盈亏</th>
+              <th name="colI9" width="140" columntype="double" cellalign="right" Vertical_Align="Middle">浮动盈亏</th>
+              <th name="colI10" width="140" columntype="double" cellalign="right" Vertical_Align="Middle">占用保证金</th>
+            </tr>
+          </table>
+        </div>
+        <div name="TabPage2" text="委托" type="tabpage">
+          <table name="gridOrderInfos" text="Grid" location="89,24" size="450,95" dock="fill">
+            <tr>
+              <th name="colP1" cellalign="right" columntype="text" width="100">报单编号</th>
+              <th name="colP2" cellalign="left" columntype="text" width="100">合约</th>
+              <th name="colP3" cellalign="left" columntype="text" width="80" height="27">买卖</th>
+              <th name="colP4" cellalign="left" columntype="text" width="80">开平</th>
+              <th name="colP5" cellalign="right" columntype="int" width="100">报单手数</th>
+              <th name="colP6" cellalign="right" columntype="int" width="100">未成交手数</th>
+              <th name="colP7" cellalign="right" columntype="double" width="100">报单价格</th>
+              <th name="colP8" cellalign="left" columntype="text" width="100">报单状态</th>
+              <th name="colP9" cellalign="left" columntype="text" width="100">报单时间</th>
+            </tr>
+          </table>
+        </div>
+        <div name="TabPage3" text="成交" type="tabpage">
+          <table name="gridTradeRecords" text="Grid" location="0,0" size="1082,226" dock="fill">
+            <tr>
+              <th name="colT1" width="100" cellalign="right" columntype="text" Vertical_Align="Middle">成交编号</th>
+              <th name="colT2" cellalign="left" columntype="text" width="100" Vertical_Align="Middle">合约</th>
+              <th name="colT3" cellalign="left" columntype="text" width="100" Vertical_Align="Middle">买卖</th>
+              <th name="colT4" cellalign="left" columntype="text" width="100" Vertical_Align="Middle">开平</th>
+              <th name="colT5" cellalign="right" columntype="double" width="100" Vertical_Align="Middle">成交价格</th>
+              <th name="colT6" cellalign="right" columntype="int" width="100" Vertical_Align="Middle">成交手数</th>
+              <th name="colT7" cellalign="left" columntype="text" width="100" Vertical_Align="Middle">成交时间</th>
+              <th name="colT8" cellalign="right" columntype="text" width="100" Vertical_Align="Middle">报单编号</th>
+              <th name="colT9" cellalign="left" columntype="text" visible="false" Vertical_Align="Middle">成交类型</th>
+              <th name="colT10" cellalign="right" columntype="double" width="100" Vertical_Align="Middle">手续费</th>
+              <th name="colT11" cellalign="left" columntype="text" width="100" Vertical_Align="Middle">交易所</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <input type="button" name="btnSettlementInfo" text="结算单" location="1003,51" size="100,25" />
+      <input type="checkbox" name="cbStopOpen" text="暂停开仓" location="107,91" size="117,20" checked="False" />
+    </div>
+  </body>
+</html>
